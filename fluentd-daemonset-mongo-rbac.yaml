@@ -67,7 +67,11 @@ spec:
           # Mongodb connection uri, see https://docs.mongodb.com/manual/reference/connection-string for more detail.
           # ================================================================
           - name:  FLUENT_MONGO_CONNECTION_URI
-            value: "replace this with mongo connection string"
+            value: "mongodb://k8s_logging_mdb:27017/fluentd"
+          # Mongodb collection name to insert
+          # ================================================================
+          - name:  FLUENT_MONGO_COLLECTION
+            value: "fluentd"
         resources:
           limits:
             memory: 200Mi
